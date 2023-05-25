@@ -1,3 +1,3 @@
 # wise
 
-v0 - Spinning up a repo
+v0 - Spinning up a repo...
