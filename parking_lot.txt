@@ -1,0 +1,13 @@
+## Extract skills from LinkedIn user profiles
+
+
+from bs4 import BeautifulSoup
+import requests
+
+url = 'https://www.linkedin.com/in/john-doe/'
+page = requests.get(url)
+soup = BeautifulSoup(page.content, 'html.parser')
+
+skills = soup.find_all('span', class_='pv-skill-category-entity__name-text')
+for skill in skills:
+    print(skill.text)
